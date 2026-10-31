@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🚌 Bus Management System</h1>
+        <p>Find your bus. Plan your journey.</p>
+    </header>
+
+    <main>
+
+        <section class="search-section">
+            <h2>Find Your Bus</h2>
+
+            <input type="text" id="searchInput"
+                placeholder="Search bus number or destination">
+
+            <div class="filters">
+
+                <select id="sourceFilter">
+                    <option value="">All Sources</option>
+                    <option value="Mangalore">Mangalore</option>
+                    <option value="Udupi">Udupi</option>
+                    <option value="Bangalore">Bangalore</option>
+                    <option value="Mysore">Mysore</option>
+                </select>
+
+                <select id="destinationFilter">
+                    <option value="">All Destinations</option>
+                    <option value="Mangalore">Mangalore</option>
+                    <option value="Udupi">Udupi</option>
+                    <option value="Bangalore">Bangalore</option>
+                    <option value="Mysore">Mysore</option>
+                </select>
+
+                <button onclick="searchBus()">Search Buses</button>
+                <button onclick="resetFilters()">Reset</button>
+
+            </div>
+        </section>
+
+        <section>
+            <h2>Available Buses</h2>
+            <div id="busList"></div>
+        </section>
+
+    </main>
+    <div id="busModal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal()">x</button>
+            <h2>Bus Details</h2>
+            <div id="modalDetails"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
